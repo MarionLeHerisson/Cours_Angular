@@ -6,3 +6,4 @@ function startTurn(pokemon1, pokemon2) {
     }
     return pokemon2;
 }
+exports.default = startTurn;

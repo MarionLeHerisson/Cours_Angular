@@ -1,22 +1,28 @@
 export default class Pokemon implements Pokemon {
+    public atk;
+    public hp;
     public name;
     public speed;
 
     constructor(name: string, speed: number = 3) {
-        // this.lp = lp;
-        // this.lpMax = lpMax;
-        // this.lvl = lvl;
         this.name = name;
         this.speed = speed;
+        this.atk = 5;
+        this.hp = 10;
+        // this.lpMax = lpMax;
+        // this.lvl = lvl;
         // this.type = type;
         // this.xp = xp;
         // this.xpMax = xpMax;
     }
 
-    // attack(): string {
-    //     return "It's super effective !";
-    // }
-    //
+    attack(pokemon): string {
+
+        pokemon.hp -= this.atk;
+
+        return "It's super effective !";
+    }
+
     // gainXp(amount: number): void {
     //     this.xp += amount;
     //
