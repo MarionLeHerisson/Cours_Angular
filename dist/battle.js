@@ -11,6 +11,16 @@ var Battle = /** @class */ (function () {
         this.second.attack(this.first);
     };
     Battle.prototype.checkVictory = function () {
+        if (this.first.isKo()) {
+            console.log(this.first.name + " is KO !");
+            console.log(this.second.name + " won the fight !");
+            return this.second;
+        }
+        else if (this.second.isKo()) {
+            console.log(this.second.name + " is KO !");
+            console.log(this.first.name + " won the fight !");
+            return this.first;
+        }
     };
     Battle.prototype.setTurns = function (random) {
         if (random === void 0) { random = Math.random; }

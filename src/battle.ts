@@ -19,9 +19,20 @@ export default class Battle {
         this.second.attack(this.first);
     }
 
-    // checkVictory() {
-    //
-    // }
+    checkVictory(): Pokemon {
+        if(this.first.isKo()) {
+            console.log(this.first.name + " is KO !");
+            console.log(this.second.name + " won the fight !");
+
+            return this.second;
+        }
+        else if(this.second.isKo()) {
+            console.log(this.second.name + " is KO !");
+            console.log(this.first.name + " won the fight !");
+
+            return this.first;
+        }
+    }
 
     setTurns(random = Math.random): void {
         if (this.pokemon1.speed > this.pokemon2.speed) {

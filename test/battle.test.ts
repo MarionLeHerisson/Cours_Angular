@@ -31,3 +31,15 @@ test('both pokemon loose life after a round', () => {
     expect(pikachu.hp).toBe(5);
     expect(magicarpe.hp).toBe(5);
 });
+
+test('if a pokemon won a battle', () => {
+    const magicarpe = new Pokemon("Magicarpe", 2);
+    const pikachu = new Pokemon("Pikachu", 4);
+
+    const battle = new Battle(magicarpe, pikachu);
+    battle.setTurns();
+    magicarpe.attack(pikachu);
+    magicarpe.attack(pikachu);
+
+    expect(battle.checkVictory()).toBe(magicarpe);
+});
