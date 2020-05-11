@@ -1,0 +1,19 @@
+{
+  "name": "cours_angular",
+  "version": "1.0.0",
+  "description": "Marion Hurteau - 5JAL",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarionLeHerisson/Cours_Angular.git"
+  },
+  "author": "MarionLeHerisson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MarionLeHerisson/Cours_Angular/issues"
+  },
+  "homepage": "https://github.com/MarionLeHerisson/Cours_Angular#readme"
+}
