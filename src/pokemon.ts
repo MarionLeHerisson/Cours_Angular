@@ -1,4 +1,6 @@
-export default class Pokemon implements Pokemon {
+import PokemonInterface from "./interfaces";
+
+export default class Pokemon implements PokemonInterface {
     public atk;
     public hp;
     public name;
@@ -16,11 +18,13 @@ export default class Pokemon implements Pokemon {
         // this.xpMax = xpMax;
     }
 
-    attack(pokemon): string {
+    attack(adversary: Pokemon): void {
 
-        pokemon.hp -= this.atk;
+        adversary.hp -= this.atk;
 
-        return "It's super effective !";
+        console.log(this.name + " uses his basic attack !");
+        console.log(adversary.name + " now has " + adversary.hp + " hp.");
+        // return "It's super effective !";
     }
 
     // gainXp(amount: number): void {

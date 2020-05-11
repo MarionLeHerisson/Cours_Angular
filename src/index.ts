@@ -1,4 +1,8 @@
 import Pokemon from './pokemon';
+import Battle from "./battle";
 
-const starter = new Pokemon("Magicarpe", 3);
-console.log(starter.name);
+const magicarpe = new Pokemon("Magicarpe", 7);
+const ronflex = new Pokemon("Ronflex", 3);
+
+const battle = new Battle(magicarpe, ronflex);
+battle.round();

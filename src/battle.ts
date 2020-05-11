@@ -13,21 +13,23 @@ export default class Battle {
 
     round(): string {
 
-        this.startTurn();
+        this.setTurns();
 
         this.first.attack(this.second);
         this.second.attack(this.first);
-        
+
         return "";
     }
 
-    startTurn(): void {
+    setTurns(): void {
         if (this.pokemon1.speed > this.pokemon2.speed) {
             this.first = this.pokemon1;
             this.second = this.pokemon2;
         }
         this.first = this.pokemon2;
         this.second = this.pokemon1;
+
+        console.log(this.first.name + " will start the fight.");
     }
 }
 
