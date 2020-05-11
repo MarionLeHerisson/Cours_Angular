@@ -14,6 +14,6 @@ npm init
 npm install -g typescript
 ```
 
-Compiler avec `npm run tsc index.ts`
+Compiler avec `npm run tsc`
 
-Puis lancer : `node index.js`
+Puis lancer : `node dist/index.js`

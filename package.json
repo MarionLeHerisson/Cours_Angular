@@ -1,10 +1,10 @@
 {
   "name": "cours_angular",
   "version": "1.0.0",
-  "description": "Marion Hurteau - 5JAL",
-  "main": "index.js",
+  "description": "Exercices du cours d'Angular",
+  "main": "src/index.js",
   "scripts": {
-    "test": "test",
+    "test": "jest",
     "tsc": "tsc"
   },
   "repository": {
@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/MarionLeHerisson/Cours_Angular/issues"
   },
-  "homepage": "https://github.com/MarionLeHerisson/Cours_Angular#readme"
+  "homepage": "https://github.com/MarionLeHerisson/Cours_Angular#angular",
+  "devDependencies": {
+    "@types/jest": "^25.2.1",
+    "jest": "^26.0.1",
+    "ts-jest": "^25.5.1",
+    "typescript": "^3.8.3"
+  }
 }
