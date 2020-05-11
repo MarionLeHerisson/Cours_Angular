@@ -54,3 +54,24 @@ test('a battle should stop when a pokemon is KO', () => {
 
     expect(battle.winner).toBe(pikachu);
 });
+
+test('a pokemon that wins a fight gains xp', () => {
+    const magicarpe = new Pokemon("Magicarpe", 2);
+    const pikachu = new Pokemon("Pikachu", 4);
+
+    expect(pikachu.xp).toBe(0);
+    expect(magicarpe.xp).toBe(0);
+
+    const battle = new Battle(magicarpe, pikachu);
+    battle.fight();
+
+    expect(pikachu.xp).toBe(13);
+    expect(magicarpe.xp).toBe(0);
+});
+
+test('a pokemon with many xp wins a lvl', () => {
+    const ronflex = new Pokemon("Ronflex", 2);
+    ronflex.gainXp(15);
+
+    expect(ronflex.lvl).toBe(2);
+});

@@ -24,12 +24,12 @@ var Battle = /** @class */ (function () {
         if (this.first.isKo()) {
             console.log(this.first.name + " is KO !");
             console.log(this.second.name + " won the battle !");
-            this.winner = this.second;
+            this.winner = this.second.gainXp(13);
         }
         else if (this.second.isKo()) {
             console.log(this.second.name + " is KO !");
             console.log(this.first.name + " won the battle !");
-            this.winner = this.first;
+            this.winner = this.first.gainXp(13);
         }
     };
     Battle.prototype.setTurns = function (random) {

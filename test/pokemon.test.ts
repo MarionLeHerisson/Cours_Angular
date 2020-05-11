@@ -18,3 +18,11 @@ test('a pokemon with 0 hp is KO', () => {
 
     expect(pikachu.isKo()).toBe(true);
 });
+
+test('a pokemon wins xp', () => {
+    const magicarpe = new Pokemon("Magicarpe", 2);
+
+    magicarpe.gainXp(7);
+
+    expect(magicarpe.xp).toBe(7);
+});
