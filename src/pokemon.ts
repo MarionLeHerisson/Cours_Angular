@@ -41,7 +41,7 @@ export default class Pokemon implements PokemonInterface {
         return this.hp === 0;
     }
 
-    looseLife(amount: number) {
+    looseLife(amount: number): void {
         this.hp -= amount;
 
         if(this.hp < 0) {
