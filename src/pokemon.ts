@@ -50,11 +50,11 @@ export default class Pokemon implements PokemonInterface {
     //         this.lp = this.lpMax;
     //     }
     // }
-    //
-    // isKo(): boolean {
-    //     return this.lp === 0;
-    // }
-    //
+
+    isKo(): boolean {
+        return this.hp === 0;
+    }
+
     // lvlUp(): void {
     //     this.lvl += 1;
     //     this.lpMax += 10;

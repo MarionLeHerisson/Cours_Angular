@@ -11,6 +11,16 @@ test('faster pokemon starts first', () => {
     expect(battle.first).toBe(pikachu);
 });
 
+test('pokemons with same speed are randomly chosen', () => {
+    const magicarpe = new Pokemon("Magicarpe", 2);
+    const pikachu = new Pokemon("Pikachu", 4);
+
+    const battle = new Battle(magicarpe, pikachu);
+    battle.setTurns(() => 1);
+
+    expect(battle.first).toBe(pikachu);
+});
+
 test('both pokemon loose life after a round', () => {
     const magicarpe = new Pokemon("Magicarpe", 2);
     const pikachu = new Pokemon("Pikachu", 4);

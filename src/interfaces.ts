@@ -5,6 +5,6 @@ export default interface PokemonInterface {
     // gainXp(amount: number): void;
     // gainLife(amount: number): void
     // looseLife(amount: number): void;
-    // isKo(): boolean;
+    isKo(): boolean;
     // lvlUp(): void;
 }

@@ -9,16 +9,28 @@ var Battle = /** @class */ (function () {
         this.setTurns();
         this.first.attack(this.second);
         this.second.attack(this.first);
-        return "";
     };
-    Battle.prototype.setTurns = function () {
+    Battle.prototype.checkVictory = function () {
+    };
+    Battle.prototype.setTurns = function (random) {
+        if (random === void 0) { random = Math.random; }
         if (this.pokemon1.speed > this.pokemon2.speed) {
             this.first = this.pokemon1;
             this.second = this.pokemon2;
         }
+        else if (this.pokemon1.speed === this.pokemon2.speed) {
+            if (random() % 2 === 1) {
+                this.first = this.pokemon1;
+                this.second = this.pokemon2;
+            }
+            else {
+                this.first = this.pokemon2;
+                this.second = this.pokemon1;
+            }
+        }
         this.first = this.pokemon2;
         this.second = this.pokemon1;
-        console.log(this.first.name + " will start the fight !");
+        console.log(this.first.name + " will start the fight.");
     };
     return Battle;
 }());
