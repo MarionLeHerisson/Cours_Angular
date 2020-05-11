@@ -26,3 +26,10 @@ test('a pokemon wins xp', () => {
 
     expect(magicarpe.xp).toBe(7);
 });
+
+test('a pokemon with many xp wins a lvl', () => {
+    const ronflex = new Pokemon("Ronflex", 2);
+    ronflex.gainXp(15);
+
+    expect(ronflex.lvl).toBe(2);
+});
