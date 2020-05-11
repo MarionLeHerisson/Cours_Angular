@@ -40,6 +40,17 @@ test('if a pokemon won a battle', () => {
     battle.setTurns();
     magicarpe.attack(pikachu);
     magicarpe.attack(pikachu);
+    battle.checkVictory();
 
-    expect(battle.checkVictory()).toBe(magicarpe);
+    expect(battle.winner).toBe(magicarpe);
+});
+
+test('a battle should stop when a pokemon is KO', () => {
+    const magicarpe = new Pokemon("Magicarpe", 2);
+    const pikachu = new Pokemon("Pikachu", 4);
+
+    const battle = new Battle(magicarpe, pikachu);
+    battle.fight();
+
+    expect(battle.winner).toBe(pikachu);
 });
